@@ -1,5 +1,6 @@
 # url-shortener
-This app provides user interface and api for shortening urls
+This app provides user interface and api for shortening urls.
+It is currently deploed at https://short-url-test.herokuapp.com/
 
 ## Installation
 ```bash
@@ -21,8 +22,8 @@ Run app:
 ```bash
 flask run
 ```
-![](/screenshots/main_page.png)
+<kbd>![](/screenshots/main_page.png)</kbd>
 
 ## API
 By clicking "API" link in the top right corner we can see api documentation:
-![](/screenshots/api_root.png)
+<kbd>![](/screenshots/api_root.png)<kbd>
