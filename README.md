@@ -21,8 +21,8 @@ Run app:
 ```bash
 flask run
 ```
-![](/screenshots/main_page.png)
+<kbd>![](/screenshots/main_page.png)</kbd>
 
 ## API
 By clicking "API" link in the top right corner we can see api documentation:
-![](/screenshots/api_root.png)
+<kbd>![](/screenshots/api_root.png)<kbd>
