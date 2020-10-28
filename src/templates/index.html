@@ -2,16 +2,18 @@
 
 {% block content %}
     <form id="add_form" action="/api/links_pairs/" method="post">
-        <input type="text" name="original_url" placeholder="URL" autocomplete="off">
-        <input
-                type="number"
+        <input type="url"
+               pattern="https://.*"
+               name="original_url"
+               placeholder="https://example.com"
+               autocomplete="off">
+        <input type="number"
                 name="days_limit"
                 placeholder="Expires in ... days"
                 autocomplete="off"
                 min=1
-                max=365
-        >
-        <input type="submit" value="Add url">
+                max=365>
+        <input type="submit" value="Shorten url">
     </form>
     <hr/>
     {% for pair in pairs %}
