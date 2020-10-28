@@ -1,5 +1,6 @@
 # url-shortener
-This app provides user interface and api for shortening urls
+This app provides user interface and api for shortening urls.
+It is currently deploed at https://short-url-test.herokuapp.com/
 
 ## Installation
 ```bash
