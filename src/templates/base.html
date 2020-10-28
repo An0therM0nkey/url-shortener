@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    {% block title %}
+        <title>Title</title>
+    {% endblock %}
+</head>
+<body>
+    {% block header %}
+        <div class="header">
+            <a href="{{ url_for('home.index', _external=True) }}">URL Shortener</a>
+            <a href="/api/">API</a>
+        </div>
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+</body>
+    {% block scripts %}
+    {% endblock %}
+</html>

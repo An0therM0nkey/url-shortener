@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form id="add_form" action="/api/links_pairs/" method="post">
+        <input type="text" name="original_url" placeholder="URL" autocomplete="off">
+        <input
+                type="number"
+                name="days_limit"
+                placeholder="Expires in ... days"
+                autocomplete="off"
+                min=1
+                max=365
+        >
+        <input type="submit" value="Add url">
+    </form>
+    <hr/>
+    {% for pair in pairs %}
+        Original url:
+        <a href="{{ pair.redirect_url }}" target="_blank">
+            {{ pair.original_url }}
+        </a>
+        <br>
+        Short url:
+        <a href="{{ url_for('home.index', _external=True) }}{{ pair.short_url }}" target="_blank">
+            {{ url_for('home.index', _external=True) }}{{ pair.short_url }}
+        </a>
+        <div>
+            Days limit:
+            {{ pair.days_limit }}
+        </div>
+        <div>
+            Expires on:
+            {{ pair.expires_on }}
+        </div>
+        <form class="js-delete-form" action="/api/links_pairs/{{pair.id}}">
+            <input type="submit" value="Delete">
+        </form>
+        <hr>
+    {% endfor %}
+{% endblock %}
+{% block scripts %}
+    <script src="/static/js/scripts.js"></script>
+{% endblock %}
+
+

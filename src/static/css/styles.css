@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+td, th {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+caption {
+    text-align: left;
+}

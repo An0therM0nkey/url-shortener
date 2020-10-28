@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <ul style="list-style:none">
+        <li>
+            <h2>POST links_pairs/</h2>
+            <p>Description: creates a links_pair for "original_url"<p>
+            <table>
+                <caption>Request body parameters:</caption>
+                <th>Name</th>
+                <th>Required</th>
+                <th>Default</th>
+                <th>Type</th>
+                <th>Description</th>
+                <tr>
+                    <td>original_url</td>
+                    <td>True</td>
+                    <td></td>
+                    <td>string</td>
+                    <td>url you want to shorten</td>
+                </tr>
+                <tr>
+                    <td>days_limit</td>
+                    <td>False</td>
+                    <td>90</td>
+                    <td>int</td>
+                    <td>period, in which short url will be available</td>
+                </tr>
+            </table>
+            <p>Response: single links pair object</p>
+        </li>
+        <li>
+            <h2>GET links_pairs/</h2>
+            <p>Description: returns all links_pairs<p>
+            <p>Response: list of links pair objects</p>
+        </li>
+        <li>
+            <h2>GET links_pairs/&#60;pair_id&#62;</h2>
+            <p>Description: returns a links_pair with id="pair_id"<p>
+            <table>
+                <caption>Get parameters:</caption>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <tr>
+                    <td>pair_id</td>
+                    <td>int</td>
+                    <td>links pair id</td>
+                </tr>
+            </table>
+            <p>Response: single links pair object</p>
+        </li>
+        <li>
+            <h2>DELETE links_pairs/&#60;pair_id&#62;</h2>
+            <p>Description: deletes a links_pair with id="pair_id"<p>
+            <table>
+                <caption>Get parameters:</caption>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Description</th>
+                <tr>
+                    <td>pair_id</td>
+                    <td>int</td>
+                    <td>links pair id</td>
+                </tr>
+            </table>
+            <p>Response: single links pair object</p>
+        </li>
+        <li>
+            <table>
+                <caption>Links pair object:</caption>
+                <th>Name</th>
+                <th>Type</th>
+                <tr>
+                    <td>date_created</td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>original_url</td>
+                    <td>string</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td>int</td>
+                </tr>
+                <tr>
+                    <td>days_limit</td>
+                    <td>int</td>
+                </tr>
+                <tr>
+                    <td>short_url</td>
+                    <td>string</td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+{% endblock %}
